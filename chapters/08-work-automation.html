@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8장. 업무자동화 | AI 교육 아카데미</title>
+<meta name="description" content="자동화 대상 업무 찾는 법, 노코드 자동화 툴, AI+자동화 결합 사례와 실전 예제를 배웁니다.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-page="08">
+
+<header class="site-header">
+  <a class="brand" href="../index.html"><span class="logo-badge">AI</span> AI 교육 아카데미</a>
+  <div class="header-actions">
+    <a class="header-home-link" href="../index.html">전체 목차</a>
+    <button class="hamburger" id="hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+<div class="layout">
+  <nav id="sidebar" aria-label="챕터 목차"></nav>
+
+  <main>
+    <div class="chapter-header">
+      <span class="chapter-eyebrow">Chapter 08 · 마지막 챕터</span>
+      <h1>업무자동화</h1>
+      <p class="chapter-subtitle">
+        같은 일을 매번 반복하고 계신가요? AI와 자동화 도구를 결합하면 시간을 크게 아낄 수 있습니다.
+        마지막 챕터에서는 내 업무 중 자동화할 부분을 찾아내고, 실제로 자동화하는 방법을 배워봅니다.
+      </p>
+      <div class="goal-box">
+        <h2>🎯 이번 챕터 학습목표</h2>
+        <ul>
+          <li>자동화하기 좋은 업무를 스스로 찾아낼 수 있다</li>
+          <li>대표적인 노코드 자동화 툴을 이해한다</li>
+          <li>AI와 자동화를 결합한 실전 사례를 안다</li>
+          <li>나의 업무 하나를 실제로 자동화 설계해본다</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>1. 자동화할 업무, 어떻게 찾을까?</h2>
+      <p>모든 업무를 자동화할 필요는 없습니다. 아래 조건에 해당하는 업무부터 시작하세요.</p>
+      <ul>
+        <li><strong>반복 빈도가 높다</strong> — 매일 또는 매주 똑같이 반복되는 작업</li>
+        <li><strong>규칙이 명확하다</strong> — "이 조건이면 이렇게 처리한다"가 분명한 작업</li>
+        <li><strong>시간이 많이 드는데 판단은 단순하다</strong> — 데이터 정리, 알림 발송, 형식 변환 등</li>
+      </ul>
+      <div class="prompt-box">
+        <span class="label">자동화 후보 찾기 프롬프트</span>내 하루 업무는 다음과 같아: [업무 목록 나열]. 이 중에서 반복적이고 규칙이 명확해서 자동화하기 좋은 업무를 우선순위와 함께 추천해줘. 왜 자동화하기 좋은지 이유도 설명해줘.</div>
+    </section>
+
+    <section class="content-section">
+      <h2>2. 대표적인 노코드 자동화 툴</h2>
+      <table class="data-table">
+        <thead><tr><th>툴</th><th>특징</th><th>이런 작업에 적합</th></tr></thead>
+        <tbody>
+          <tr><td>구글 앱스크립트</td><td>구글 시트/문서/지메일 등 구글 서비스 사이 자동화에 특화, 무료</td><td>구글 시트 자동 정리, 정기 이메일 발송, 알림 자동화</td></tr>
+          <tr><td>Zapier</td><td>수천 개의 앱을 서로 연결해주는 대표적인 자동화 플랫폼</td><td>여러 서비스(폼, 메일, 메신저 등)를 연결하는 자동화</td></tr>
+          <tr><td>Make (구 Integromat)</td><td>흐름을 시각적으로 설계할 수 있는 자동화 플랫폼</td><td>여러 단계로 이루어진 복잡한 자동화 워크플로우</td></tr>
+          <tr><td>카카오워크·슬랙 자동화</td><td>메신저 안에서 알림, 챗봇 자동 응답 설정</td><td>팀 내 반복 공지, 간단한 문의 자동 응답</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="content-section">
+      <h2>3. AI + 자동화, 이렇게 결합한다</h2>
+      <p>단순 자동화는 "규칙대로 실행"만 가능하지만, 여기에 AI를 결합하면 "판단과 생성"까지 자동화할 수 있습니다.</p>
+      <ul>
+        <li><strong>이메일 요약 자동화</strong>: 매일 아침 안 읽은 메일들을 AI가 자동으로 요약해서 알려줌</li>
+        <li><strong>문서 자동 정리</strong>: 회의록, 영수증, 계약서 등을 업로드하면 AI가 핵심 정보만 뽑아 정리</li>
+        <li><strong>일정관리 자동화</strong>: 예약 문의 메시지가 오면 AI가 내용을 파악해 캘린더에 자동 등록</li>
+        <li><strong>고객 문의 1차 응대</strong>: 자주 묻는 질문에 AI 챗봇이 먼저 답하고, 어려운 질문만 사람에게 전달</li>
+      </ul>
+    </section>
+
+    <section class="content-section">
+      <h2>4. 실전 예제로 배우는 자동화</h2>
+
+      <h3>예제 ① 구글시트 자동 정리</h3>
+      <div class="prompt-box">
+        <span class="label">구글 앱스크립트 요청 프롬프트</span>구글 시트에서 A열에 새로운 주문이 입력되면, 자동으로 B열에 "주문일자"를 오늘 날짜로 채우고, 담당자에게 이메일로 알림을 보내는 구글 앱스크립트 코드를 작성해줘. 각 줄에 어떤 역할을 하는지 주석도 달아줘.</div>
+
+      <h3>예제 ② 반복 업무 챗봇 만들기</h3>
+      <p>
+        AI 챗봇에 "우리 가게 자주 묻는 질문(FAQ)"과 답변을 미리 입력해두면, 반복되는 고객 문의에 대해
+        일관되고 빠른 1차 답변을 자동으로 제공할 수 있습니다.
+      </p>
+      <div class="prompt-box">
+        <span class="label">FAQ 챗봇 설정 프롬프트 예시</span>너는 우리 가게 고객 응대 챗봇이야. 아래 FAQ를 참고해서 질문에 답변해줘. 목록에 없는 질문은 "직원 확인 후 다시 안내드리겠습니다"라고 답해줘.
+[FAQ 목록: 영업시간, 주차, 예약 방법, 배송 안내 등]</div>
+
+      <h3>예제 ③ 정기 보고서 자동 요약</h3>
+      <div class="prompt-box">
+        <span class="label">예시</span>매주 금요일, 이번 주 매출 데이터(엑셀 파일)를 업로드하면 요일별 매출 추이, 가장 많이 팔린 상품 top3, 전주 대비 증감을 요약한 보고서를 작성해줘.</div>
+    </section>
+
+    <div class="practice-box">
+      <h3>✏️ 실습: 나의 업무 자동화 1개 설계하기</h3>
+      <ol>
+        <li>내 업무(또는 일상) 중 반복적이고 규칙이 명확한 작업 1개를 고릅니다.</li>
+        <li>AI에게 이 작업의 자동화 방법을 단계별로 설계해달라고 요청합니다.</li>
+        <li>구글 앱스크립트, Zapier 등 적합한 도구를 하나 선택해 실제로 간단한 자동화를 만들어봅니다.</li>
+        <li>일주일간 사용해보고, 얼마나 시간이 절약됐는지 체크해봅니다.</li>
+      </ol>
+    </div>
+
+    <div class="summary-box">
+      <h2>✅ 핵심 요약 체크리스트</h2>
+      <ul class="checklist">
+        <li>반복 빈도와 규칙 명확성을 기준으로 자동화 후보 업무를 찾을 수 있다</li>
+        <li>구글 앱스크립트, Zapier, Make 등 노코드 자동화 툴의 쓰임새를 이해했다</li>
+        <li>AI를 결합해 판단·생성까지 자동화하는 사례를 알고 있다</li>
+        <li>나의 업무 중 하나를 실제로 자동화 설계해보았다</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <h3>🎉 축하합니다! 전체 8개 챕터를 완주하셨습니다</h3>
+      <ul>
+        <li>AI 기초 개념부터 프롬프트, 콘텐츠 제작, 소상공인 마케팅, 자동화까지 한 바퀴를 모두 둘러보셨습니다.</li>
+        <li>가장 중요한 것은 "직접 해보는 것"입니다. 오늘 배운 프롬프트 예제 중 하나라도 실제로 사용해보세요.</li>
+        <li>주변 분들에게도 이 자료를 공유해 함께 AI를 배워보세요!</li>
+      </ul>
+    </div>
+
+    <div id="chapter-pager"></div>
+  </main>
+</div>
+
+<footer class="site-footer">
+  AI 교육 아카데미 · 주변 사람들과 함께 배우는 AI 실전 강의 자료
+</footer>
+
+<script src="../assets/js/nav.js"></script>
+</body>
+</html>
