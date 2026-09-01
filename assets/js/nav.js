@@ -75,6 +75,10 @@
     return inChapter() ? "../index.html" : "index.html";
   }
 
+  function aboutHref() {
+    return inChapter() ? "../index.html#about" : "#about";
+  }
+
   function escapeHtml(str) {
     return String(str).replace(/[&<>"']/g, function (c) {
       return (
@@ -98,6 +102,11 @@
       '" href="' +
       homeHref() +
       '">🏠 코스 홈 · 전체 목차</a>';
+
+    html +=
+      '<a class="sidebar-home-link" href="' +
+      aboutHref() +
+      '">👤 소개 (만든 사람)</a>';
 
     html += '<div class="sidebar-section-label">전체 8개 챕터</div>';
     html += '<ul class="sidebar-nav-list">';
@@ -171,6 +180,25 @@
     mount.innerHTML = html;
   }
 
+  function setupAboutToggle() {
+    var about = document.getElementById("about");
+    if (!about) return;
+
+    function sync() {
+      if (window.location.hash === "#about") {
+        about.classList.remove("is-hidden");
+        setTimeout(function () {
+          about.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 0);
+      } else {
+        about.classList.add("is-hidden");
+      }
+    }
+
+    sync();
+    window.addEventListener("hashchange", sync);
+  }
+
   function setupMobileToggle() {
     var sidebar = document.getElementById("sidebar");
     var hamburger = document.getElementById("hamburger");
@@ -196,6 +224,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     renderSidebar();
     renderPager();
+    setupAboutToggle();
     setupMobileToggle();
   });
 })();
