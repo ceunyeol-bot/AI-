@@ -182,16 +182,19 @@
 
   function setupAboutToggle() {
     var about = document.getElementById("about");
+    var homeView = document.getElementById("home-view");
     if (!about) return;
 
     function sync() {
       if (window.location.hash === "#about") {
         about.classList.remove("is-hidden");
+        if (homeView) homeView.classList.add("is-hidden");
         setTimeout(function () {
           about.scrollIntoView({ behavior: "smooth", block: "start" });
         }, 0);
       } else {
         about.classList.add("is-hidden");
+        if (homeView) homeView.classList.remove("is-hidden");
       }
     }
 
