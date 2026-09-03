@@ -505,6 +505,15 @@ main {
   margin: 0 0 16px;
 }
 
+.section-video {
+  width: 100%;
+  max-width: 640px;
+  display: block;
+  margin: 0 0 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
 .content-section h3 {
   font-size: 1.06rem;
   margin: 22px 0 10px;
@@ -862,6 +871,18 @@ main {
   gap: 14px;
 }
 
+.role-video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.role-video-grid .section-video {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
 .role-gallery-grid figure {
   margin: 0;
   border-radius: 12px;
@@ -892,6 +913,7 @@ main {
   .profile-hero { flex-direction: column; align-items: center; text-align: center; }
   .profile-metrics { grid-template-columns: 1fr; text-align: left; }
   .role-gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .role-video-grid { grid-template-columns: 1fr; }
 
   .hamburger { display: inline-flex; }
 

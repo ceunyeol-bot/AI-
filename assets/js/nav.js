@@ -59,6 +59,13 @@
     },
   ];
 
+  // 8개 챕터 뒤에 이어지는 부가 안내 페이지 (커리큘럼 챕터 수에는 포함하지 않음)
+  var EXTRA_PAGE = {
+    id: "extra",
+    file: "09-extra-info.html",
+    title: "기타 안내",
+  };
+
   function getPage() {
     return document.body.getAttribute("data-page") || "home";
   }
@@ -125,6 +132,15 @@
         "</span></a></li>";
     });
 
+    html +=
+      '<a class="sidebar-home-link' +
+      (page === EXTRA_PAGE.id ? " active" : "") +
+      '" href="' +
+      chapterHref(EXTRA_PAGE.file) +
+      '">📎 ' +
+      escapeHtml(EXTRA_PAGE.title) +
+      "</a>";
+
     html += "</ul>";
     mount.innerHTML = html;
   }
@@ -134,6 +150,29 @@
     if (!mount) return;
 
     var page = getPage();
+    var html = '<div class="chapter-pager">';
+    var lastChapter = CHAPTERS[CHAPTERS.length - 1];
+
+    if (page === EXTRA_PAGE.id) {
+      html +=
+        '<a class="pager-link prev" href="' +
+        chapterHref(lastChapter.file) +
+        '"><span class="pager-label">← 이전 챕터</span><span class="pager-title">' +
+        lastChapter.id +
+        ". " +
+        escapeHtml(lastChapter.title) +
+        "</span></a>";
+
+      html +=
+        '<a class="pager-link next" href="' +
+        homeHref() +
+        '"><span class="pager-label">🎉 마지막 페이지</span><span class="pager-title">전체 목차로 돌아가기</span></a>';
+
+      html += "</div>";
+      mount.innerHTML = html;
+      return;
+    }
+
     var idx = CHAPTERS.findIndex(function (ch) {
       return ch.id === page;
     });
@@ -141,8 +180,6 @@
 
     var prev = idx > 0 ? CHAPTERS[idx - 1] : null;
     var next = idx < CHAPTERS.length - 1 ? CHAPTERS[idx + 1] : null;
-
-    var html = '<div class="chapter-pager">';
 
     if (prev) {
       html +=
@@ -172,8 +209,10 @@
     } else {
       html +=
         '<a class="pager-link next" href="' +
-        homeHref() +
-        '"><span class="pager-label">🎉 마지막 챕터</span><span class="pager-title">전체 목차로 돌아가기</span></a>';
+        chapterHref(EXTRA_PAGE.file) +
+        '"><span class="pager-label">다음 →</span><span class="pager-title">' +
+        escapeHtml(EXTRA_PAGE.title) +
+        "</span></a>";
     }
 
     html += "</div>";
